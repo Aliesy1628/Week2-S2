@@ -27,17 +27,18 @@ public class Main {
 
         switch (pilihan) {
             case 1:
-                cekProduk.cekProduk(p);
+                cekProduk.cekProduk(produk);
                 break;
             case 2:
-                produk.tambahPemasukan(100);
+                produk.tambahPemasukan();
                 break;
             case 3:
-                p.tampilInfo();
+                p.tampilInfo(p);
                 break;
             default:
                 break;
         }
+        ns.close();
         // p.tampilInfo();
         // produk.tambahPemasukan(100);
     }

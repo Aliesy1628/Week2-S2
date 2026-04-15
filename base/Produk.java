@@ -14,7 +14,7 @@ public class Produk {
         this.kategori = kategori;
     }
 
-    public void tampilInfo() {
+    public void tampilInfo(Produk a) {
         System.out.println("Produk : " + nama);
         System.out.println("Kategori : " + kategori);
         System.out.println("Harga : Rp" + harga);
