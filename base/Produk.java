@@ -2,9 +2,9 @@
 package base;
 
 public class Produk {
-    private String nama;
-    String kategori;
-    protected double harga;
+    public String nama;
+    public String kategori;
+    public double harga;
     public int stok;
 
     public Produk(String nama,double harga, int stok,String kategori) {
