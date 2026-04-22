@@ -12,8 +12,8 @@ class Pemasukan extends Produk {
     }
 
     void tambahPemasukan(int jumlah) {
-        if (jumlah <= stok) {
-            totalPemasukan += jumlah * harga;
+        if (jumlah <= getStok()) {
+            totalPemasukan += jumlah * getHarga();
             stok -= jumlah;
         }else {
             System.out.println("Stok tidak cukup!!");

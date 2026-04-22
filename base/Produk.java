@@ -4,7 +4,7 @@ package base;
 public class Produk {
     private String nama;
     String kategori;
-    protected double harga;
+    private double harga;
     public int stok;
 
     public Produk(String nama,double harga, int stok,String kategori) {
@@ -12,6 +12,26 @@ public class Produk {
         this.harga = harga;
         this.stok = stok;
         this.kategori = kategori;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+    public double getHarga() {
+        return harga;
+    }
+    public int getStok() {
+        return stok;
+    }
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setHarga(double harga) {
+        this.harga = harga;
+    }
+    public void setStok(int stok) {
+        this.stok = stok;
     }
 
     public void tampilInfo() {
