@@ -1,12 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Produk p = new Produk("Indomie Goreng", 3500, 100,  "Makanan");
-
-        System.out.println(p.stok);
-        //System.out.println(p.harga);
-        //System.out.println(p.kategori);
-        //System.out.println(p.nama);
-
-        p.tampilInfo();
+        Produk p = new Produk( "Baju", 10000.0 , 10, "YNTKTS");
+        System.out.println(p.getNama());
+        System.out.println(p.getHarga());
+        p.setHarga(15000.0);
+        System.out.println(p.getHarga());
     }
 }
