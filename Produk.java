@@ -3,7 +3,7 @@
 
 public class Produk {
     private String nama;
-    String kategori;
+    public String kategori;
     private double harga;
     private int stok;
 
