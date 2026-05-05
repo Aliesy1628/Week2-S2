@@ -6,17 +6,35 @@ public class Makanan extends Produk {
 
     }
 
-    public void tampilkanData() {
+    @Override
+    public void tampilInfo() {
+        System.out.println("Makanan");
         super.tampilInfo();
-        System.out.println("Masa expired : " + expired + "Hari");
-
+        System.out.println("Masa expired : " + expired + " Hari");
     }
 
     public void setExpired(int expired) {
-        if(expired < 0) {
+        if(expired <= 0) {
             System.out.println("Masa expired tidak boleh negatif");
         }else{
             this.expired = expired;
         }
     }
+
+    public void setExpired(int expired, String type) {
+        if(type.equals("nasi")) {
+                if(expired > 4) {
+                    System.out.println("Masa expired lebih dari 4 hari");
+                }else{
+                    this.expired = expired;
+                }
+        } else {
+            if(expired < 2) {
+                System.out.println("Masa expired kurang dari 2 hari");
+            }else{
+                this.expired = expired;
+            }
+        }
+    }
 }
+

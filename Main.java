@@ -3,6 +3,6 @@ public class Main {
         Elektronik mesinCuci = new Elektronik("Miyako", 5000.0 , 20, "Alat rumah", 5);
 
         mesinCuci.setGaransi(0);
-        mesinCuci.tampilkanData();
+        mesinCuci.tampilInfo();
     }
 }
