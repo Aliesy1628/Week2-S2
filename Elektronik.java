@@ -26,6 +26,14 @@ class Elektronik extends Produk {
 
     }
 
+    public double hitungDiskon(int jumlahBeli) {
+        return hitungTotalHarga(jumlahBeli) * PPN;
+    }
+
+    public double hitungDiskon(int jumlahBeli, double persenPajak) {
+        return hitungTotalHarga(jumlahBeli) * (persenPajak / 100);
+    }
+
     public void setGaransi(int garansi) {
         if(garansi <= 0) {
             System.out.println("Masa garansi tidak boleh negatif");
