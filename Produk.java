@@ -48,5 +48,5 @@ abstract  class Produk {
 
     public abstract void tampilInfo();
 
-    public abstract doublehitungPajak(double harga);
+    public abstract double hitungPajak(double harga);
 }

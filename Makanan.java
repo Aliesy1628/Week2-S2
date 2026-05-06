@@ -1,7 +1,7 @@
 public class Makanan extends Produk {
     private int expired;
     public Makanan(String nama,double harga, int stok, String kategori, int expired) {
-        super(nama, harga, stok, kategori);
+        super(nama, harga, stok);
         this.expired = expired;
 
     }
@@ -9,7 +9,6 @@ public class Makanan extends Produk {
     @Override
     public void tampilInfo() {
         System.out.println("Makanan");
-        super.tampilInfo();
         System.out.println("Masa expired : " + expired + " Hari");
     }
 
