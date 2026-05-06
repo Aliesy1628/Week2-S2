@@ -4,5 +4,21 @@ public class Main {
         Elektronik hp = new Elektronik("HP Samsung", "Samsung", 3200000, 25, 1);
         Makanan Indomie = new Makanan("Indomie Goreng", 3500, 100, "mie instan", "2026-12-01");
         Makanan roti = new Makanan("Roti tawar", 8000, 50, "roti", "2026-04-30");
+
+        System.out.println("===== daftar produk =====");
+        laptop.tampilInfo();
+        hp.tampilInfo();
+        Indomie.tampilInfo();
+        roti.tampilInfo();
+
+        System.out.println("===== rincian pajak elektronik =====");
+
+        double pajakLaptop = laptop.hitungPajak(1);
+        double totalLaptop = laptop.hitungHargaSetelahPajak(1);
+        
+        
     }
+
+    
+
 }
