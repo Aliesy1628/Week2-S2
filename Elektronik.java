@@ -9,10 +9,17 @@ class Elektronik extends Produk {
 
     }
 
+    public String getMerek() {
+        return merek;
+    }
+
+    public int getGaransi(){
+        return garansi;
+    }
+
     @Override
     public void tampilInfo() {
         System.out.println("Elektronik");
-
         System.out.println("Masa Garansi : " + garansi + " Tahun");
 
     }
