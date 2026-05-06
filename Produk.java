@@ -1,7 +1,7 @@
 
 
 
-public class Produk {
+abstract  class Produk {
     private String nama;
     private double harga;
     private int stok;
@@ -29,11 +29,24 @@ public class Produk {
     public void setStok(int stok) {
         this.stok = stok;
     }
-
-    public void tampilInfo() {
-        System.out.println("Produk : " + nama);
-        System.out.println("Harga : Rp" + harga);
-        System.out.println("Stok : " + stok);
-        System.out.println("-------");
+    public double hitungTotalHarga(int jumlahBeli) {
+        return harga * jumlahBeli;
     }
+
+    public void beli(int jumlahBeli) {
+        if (jumlahBeli <= 0) {
+            System.out.println("Jumlah beli harus lebih dari 0");
+            return;
+        }
+        if (jumlahBeli > stok) {
+            System.out.println("Stok" + nama + "tidak cukup, tersisa" + stok);
+            return;
+        }
+        stok -= jumlahBeli;
+        System.out.println(" Beli " + nama + " x" + jumlahBeli + " = Rp" + hitungTotalHarga(jumlahBeli) + " | Sisa stok: " + stok);
+    }
+
+    public abstract void tampilInfo();
+
+    public abstract doublehitungPajak(double harga);
 }
