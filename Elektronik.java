@@ -20,6 +20,8 @@ class Elektronik extends Produk {
     @Override
     public void tampilInfo() {
         System.out.println("Elektronik");
+        System.out.println("Nama : " + getNama());
+        System.out.println("Merek : " + merek);
         System.out.println("Masa Garansi : " + garansi + " Tahun");
 
     }
