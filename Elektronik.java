@@ -1,15 +1,18 @@
-public class Elektronik extends Produk {
+class Elektronik extends Produk {
     private int garansi;
-    public Elektronik(String nama,double harga, int stok, String kategori, int garansi) {
-        super(nama, harga, stok, kategori);
+    private String merek;
+    private static final double PPn = 0.11;
+    public Elektronik(String nama,String merek, double harga, int stok, String kategori, int garansi) {
+        super(nama, harga, stok);
         this.garansi = garansi;
+        this.merek = merek;
 
     }
 
     @Override
     public void tampilInfo() {
         System.out.println("Elektronik");
-        super.tampilInfo();
+
         System.out.println("Masa Garansi : " + garansi + " Tahun");
 
     }
