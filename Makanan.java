@@ -1,39 +1,40 @@
 public class Makanan extends Produk {
-    private int expired;
-    public Makanan(String nama,double harga, int stok, String kategori, int expired) {
+    private String kadaluarsa;
+    private String kategori;
+    public Makanan(String nama,double harga, int stok, String kategori, String kadaluarsa) {
         super(nama, harga, stok);
-        this.expired = expired;
+        this.kadaluarsa = kadaluarsa;
+        this.kategori = kategori;
 
+    }
+
+    public String getKadaluarsa() {
+        return kadaluarsa;
+    }
+
+    public String getKategori() {
+        return kategori;
     }
 
     @Override
     public void tampilInfo() {
         System.out.println("Makanan");
-        System.out.println("Masa expired : " + expired + " Hari");
+        System.out.println("Kategori : " + kategori);
+        System.out.println("Masa kadaluarsa : " + kadaluarsa);
     }
 
-    public void setExpired(int expired) {
-        if(expired <= 0) {
-            System.out.println("Masa expired tidak boleh negatif");
-        }else{
-            this.expired = expired;
-        }
+    public double hitungDiskon(int jumlahBeli) {
+        if (jumlahBeli >= 10)
+            return hitungTotalHarga(jumlahBeli) * 0.05;
+        return 0;
     }
 
-    public void setExpired(int expired, String type) {
-        if(type.equals("nasi")) {
-                if(expired > 4) {
-                    System.out.println("Masa expired lebih dari 4 hari");
-                }else{
-                    this.expired = expired;
-                }
-        } else {
-            if(expired < 2) {
-                System.out.println("Masa expired kurang dari 2 hari");
-            }else{
-                this.expired = expired;
-            }
-        }
+    public double hitungDiskon(int jumlahBeli, double persenDiskon) {
+            return hitungTotalHarga(jumlahBeli) * (persenDiskon / 100);
+    }
+
+    public double hitungHargaSetelahDiskon(intjumlahBeli) {
+        return hitungTotalHarga(jumlahBeli) - hitunfDiskon(jumlahBeli);
     }
 
     public double hitungPajak(double harga) {
